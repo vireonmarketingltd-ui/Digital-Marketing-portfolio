@@ -1,49 +1,70 @@
-/* Contact form validation */
-var rules = {
-  name:    function(v){ return !v ? 'Name is required.' : v.length < 2 ? 'At least 2 characters.' : null; },
-  email:   function(v){ return !v ? 'Email is required.' : !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) ? 'Enter a valid email address.' : null; },
-  phone:   function(v){ if(!v) return null; var d=v.replace(/[\s\-\+\(\)]/g,''); return !/^\d+$/.test(d) ? 'Digits only please.' : null; },
-  service: function(v){ return !v ? 'Please select a service.' : null; },
-  message: function(v){ return !v ? 'Message is required.' : v.length < 10 ? 'At least 10 characters.' : null; }
-};
-function fld(n){ return document.getElementById('f-'+n); }
-function grp(n){ var f=fld(n); return f ? f.closest('.fg') : null; }
-function errEl(n){ var g=grp(n); return g ? g.querySelector('.err-msg') : null; }
-function showErr(n,m){ var g=grp(n),e=errEl(n); if(g) g.classList.add('error'); if(e){e.textContent='⚠ '+m; e.classList.add('show');} }
-function clrErr(n){ var g=grp(n),e=errEl(n); if(g) g.classList.remove('error'); if(e) e.classList.remove('show'); }
-function vld(n){ var f=fld(n); if(!f) return true; var err=rules[n]?rules[n](f.value.trim()):null; if(err){showErr(n,err);return false;} clrErr(n);return true; }
+/* ============================================
+   ISAIAH JR. — MAIN.JS
+   ============================================ */
 
-document.addEventListener('DOMContentLoaded', function(){
-  var fields = ['name','email','phone','service','message'];
-  fields.forEach(function(n){
-    var f=fld(n); if(!f) return;
-    f.addEventListener('blur', function(){ vld(n); });
-    f.addEventListener('input', function(){ if(grp(n)&&grp(n).classList.contains('error')) vld(n); });
+// NAV
+(function(){
+  var ham = document.querySelector('.hamburger');
+  var menu = document.querySelector('.mobile-menu');
+  var path = window.location.pathname.split('/').pop() || 'index.html';
+
+  document.querySelectorAll('.nav-links a, .mobile-menu a').forEach(function(a){
+    if(a.getAttribute('href') === path) a.classList.add('active');
   });
 
-  var form=document.getElementById('contactForm');
-  var success=document.getElementById('formSuccess');
-  var btn=document.getElementById('submitBtn');
-  if(!form) return;
+  if(ham && menu){
+    ham.addEventListener('click', function(){
+      ham.classList.toggle('open');
+      menu.classList.toggle('open');
+    });
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        ham.classList.remove('open');
+        menu.classList.remove('open');
+      });
+    });
+  }
 
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    var ok=true;
-    fields.forEach(function(n){ if(!vld(n)) ok=false; });
-    if(!ok){ for(var i=0;i<fields.length;i++){ var g=grp(fields[i]); if(g&&g.classList.contains('error')){ fld(fields[i]).focus(); break; } } return; }
-    if(btn){ btn.textContent='Sending…'; btn.disabled=true; btn.style.opacity='.7'; }
-    setTimeout(function(){ form.style.display='none'; if(success) success.classList.add('show'); }, 1200);
-  });
+  var navbar = document.querySelector('.navbar');
+  if(navbar){
+    window.addEventListener('scroll', function(){
+      navbar.style.boxShadow = window.scrollY > 20 ? '0 4px 24px rgba(0,0,0,.4)' : 'none';
+    });
+  }
+})();
 
-  var reset=document.getElementById('resetForm');
-  if(reset){ reset.addEventListener('click', function(){
-    form.reset(); form.style.display='block';
-    if(success) success.classList.remove('show');
-    if(btn){ btn.textContent='Send Message'; btn.disabled=false; btn.style.opacity='1'; }
-    fields.forEach(clrErr);
-  }); }
+// SCROLL REVEAL
+(function(){
+  var els = document.querySelectorAll('.reveal');
+  if(!els.length) return;
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, {threshold:.12});
+  els.forEach(function(el){ obs.observe(el); });
+})();
 
-  var ph=fld('phone');
-  if(ph) ph.addEventListener('keypress', function(e){ if(!/[\d\s\+\-\(\)]/.test(e.key)&&!e.ctrlKey&&!e.metaKey) e.preventDefault(); });
-});
-
+// COUNTER ANIMATION
+function counter(el, target, suffix, dur){
+  var start = 0;
+  var step = target / (dur / 16);
+  var timer = setInterval(function(){
+    start += step;
+    if(start >= target){ start = target; clearInterval(timer); }
+    var disp = target < 10 ? start.toFixed(2) : Math.floor(start).toLocaleString();
+    el.innerHTML = disp + '<span class="suf">' + suffix + '</span>';
+  }, 16);
+}
+(function(){
+  var els = document.querySelectorAll('[data-count]');
+  if(!els.length) return;
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        var el = e.target;
+        counter(el, parseFloat(el.dataset.count), el.dataset.suffix || '', 2000);
+        obs.unobserve(el);
+      }
+    });
+  }, {threshold:.5});
+  els.forEach(function(el){ obs.observe(el); });
+})();
