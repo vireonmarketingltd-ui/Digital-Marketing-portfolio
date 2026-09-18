@@ -10,6 +10,7 @@
 <body>
 
 <nav class="navbar">
+  <input type="checkbox" id="nav-toggle" />
   <div class="navbar-inner">
     <a href="index.html" class="nav-logo">Isaiah<span>Jr.</span></a>
     <ul class="nav-links">
@@ -19,7 +20,9 @@
       <li><a href="services.html">Services</a></li>
       <li><a href="contact.html" class="nav-cta">Hire Me</a></li>
     </ul>
-    <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <label for="nav-toggle" class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </label>
   </div>
   <ul class="mobile-menu">
     <li><a href="index.html">Home</a></li>
@@ -47,24 +50,22 @@
     <div class="container">
       <div class="about-grid">
 
-        <!-- Left: Photo + quick facts -->
-        <aside class="about-photo-col reveal">
+        <aside class="about-photo-col">
           <img src="img/isaiah.jpg" alt="Isaiah Jr." class="about-photo" />
           <div class="about-quick">
             <h4>Quick Info</h4>
             <div class="qitem"><strong>Based</strong> Nigeria</div>
             <div class="qitem"><strong>Agency</strong> Vireon Marketing (Founder)</div>
-            <div class="qitem"><strong>Current</strong> Performance Marketing Manager, 9bizub</div>
+            <div class="qitem"><strong>Current</strong> Founder, Vireon Marketing</div>
             <div class="qitem"><strong>Specialism</strong> Meta Ads · Customer Acquisition</div>
             <div class="qitem"><strong>Instagram</strong> <a href="https://instagram.com/vireonmarketing_" target="_blank" rel="noopener" style="color:var(--red)">@vireonmarketing_</a></div>
             <div class="qitem"><strong>Available</strong> <span style="color:var(--success)">● Open to work</span></div>
           </div>
         </aside>
 
-        <!-- Right: Content -->
         <div class="about-content">
 
-          <div class="about-block reveal">
+          <div class="about-block">
             <h3>Profile</h3>
             <p style="margin-bottom:14px;">
               Results-driven digital marketer specialised in Meta (Facebook &amp; Instagram) advertising,
@@ -84,17 +85,17 @@
             </p>
           </div>
 
-          <div class="about-block reveal d1">
+          <div class="about-block">
             <h3>Experience</h3>
             <div class="timeline">
 
               <div class="tl-item">
                 <div class="tl-date">June 2026 – August 2026</div>
                 <div class="tl-role">Performance Marketing Manager</div>
-                <div class="tl-company">9bizub · CodeBoulevard Systems</div>
+                <div class="tl-company">9bizub · CodeBoulevard Systems · Contract</div>
                 <p class="tl-desc">
-                  9bizub is a Nigerian marketplace app connecting buyers and sellers. I built
-                  the entire marketing function from the ground up.
+                  9bizub is a Nigerian marketplace app connecting buyers and sellers. Built the
+                  entire marketing function from the ground up over a fixed-term contract.
                 </p>
                 <div class="tl-wins">
                   <div class="tl-win">1M+ impressions &amp; 72K+ landing page views at ₦0.07 per view</div>
@@ -125,7 +126,7 @@
             </div>
           </div>
 
-          <div class="about-block reveal d2">
+          <div class="about-block">
             <h3>Core Competencies</h3>
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:4px;">
               <div>
@@ -153,7 +154,7 @@
             </div>
           </div>
 
-          <div class="about-block reveal d3">
+          <div class="about-block">
             <h3>Marketing Tools</h3>
             <div class="tools-grid">
               <span class="tool-pill"><span class="tool-dot"></span>Meta Ads Manager</span>
