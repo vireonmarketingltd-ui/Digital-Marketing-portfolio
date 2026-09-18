@@ -10,6 +10,7 @@
 <body>
 
 <nav class="navbar">
+  <input type="checkbox" id="nav-toggle" />
   <div class="navbar-inner">
     <a href="index.html" class="nav-logo">Isaiah<span>Jr.</span></a>
     <ul class="nav-links">
@@ -19,7 +20,9 @@
       <li><a href="services.html">Services</a></li>
       <li><a href="contact.html" class="nav-cta">Hire Me</a></li>
     </ul>
-    <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <label for="nav-toggle" class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </label>
   </div>
   <ul class="mobile-menu">
     <li><a href="index.html">Home</a></li>
@@ -44,7 +47,7 @@
           </h1>
           <p class="hero-desc">
             Nigerian digital marketer with a proven record of building customer acquisition systems that actually convert.
-            Founder of Vireon Marketing. Currently Performance Marketing Manager at 9bizub.
+            Founder of Vireon Marketing. Former Performance Marketing Manager at 9bizub.
           </p>
           <div class="hero-cta">
             <a href="work.html" class="btn btn-red">See the Results →</a>
@@ -71,19 +74,19 @@
   <section class="stats-bar">
     <div class="container">
       <div class="stats-grid">
-        <div class="stat-item reveal">
+        <div class="stat-item">
           <div class="stat-num" data-count="1800" data-suffix="K+">1,800K<span class="suf">+</span></div>
           <div class="stat-lbl">Total Impressions</div>
         </div>
-        <div class="stat-item reveal d1">
+        <div class="stat-item">
           <div class="stat-num" data-count="72" data-suffix="K+">72K<span class="suf">+</span></div>
           <div class="stat-lbl">Landing Page Views</div>
         </div>
-        <div class="stat-item reveal d2">
+        <div class="stat-item">
           <div class="stat-num" data-count="8" data-suffix="">8<span class="suf"></span></div>
           <div class="stat-lbl">Countries Reached</div>
         </div>
-        <div class="stat-item reveal d3">
+        <div class="stat-item">
           <div class="stat-num" data-count="93" data-suffix="/100">93<span class="suf">/100</span></div>
           <div class="stat-lbl">Meta Opportunity Score</div>
         </div>
@@ -94,34 +97,34 @@
   <!-- WHAT I DO -->
   <section class="section">
     <div class="container">
-      <div class="reveal" style="margin-bottom:52px;">
+      <div style="margin-bottom:52px;">
         <span class="eyebrow">What I Do</span>
         <h2 style="color:var(--text);">Marketing that pays <span class="text-red">for itself</span></h2>
         <div class="divider-red"></div>
       </div>
       <div class="services-preview">
-        <article class="card sp-card reveal d1">
+        <article class="card sp-card">
           <div class="sp-icon">🎯</div>
           <h3>Meta Ads Management</h3>
           <p>End-to-end campaign setup, creative testing, CBO structure, and daily optimization. I've managed 13 concurrent campaigns for a single client and driven over 1.8M impressions across multiple accounts.</p>
         </article>
-        <article class="card sp-card reveal d2">
+        <article class="card sp-card">
           <div class="sp-icon">📈</div>
           <h3>Customer Acquisition Systems</h3>
           <p>From pixel setup and Conversions API to WhatsApp sales funnels and lead nurturing — I build the infrastructure behind consistent, attributable customer acquisition.</p>
         </article>
-        <article class="card sp-card reveal d3">
+        <article class="card sp-card">
           <div class="sp-icon">📱</div>
           <h3>Social Media Growth</h3>
           <p>Multi-platform outreach, content calendars, follower acquisition campaigns, and on-camera production. I ran 9bizub's first TikTok LIVE activation and managed their daily content output.</p>
         </article>
-        <article class="card sp-card reveal d4">
+        <article class="card sp-card">
           <div class="sp-icon">📊</div>
           <h3>Analytics & Reporting</h3>
           <p>Weekly performance reports, KPI monitoring, competitor audits, and data-driven creative decisions. Every recommendation I make is backed by numbers, not guesses.</p>
         </article>
       </div>
-      <div style="text-align:center;margin-top:40px;" class="reveal">
+      <div style="text-align:center;margin-top:40px;">
         <a href="services.html" class="btn btn-outline">View All Services →</a>
       </div>
     </div>
@@ -130,7 +133,7 @@
   <!-- FEATURED RESULT -->
   <section class="section-sm" style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
     <div class="container">
-      <div class="result-banner reveal">
+      <div class="result-banner">
         <div>
           <span class="eyebrow">Best Campaign</span>
           <h2 style="color:var(--text);margin-bottom:14px;">₦0.07 cost per<br/><span class="text-red">landing page view</span></h2>
@@ -142,10 +145,10 @@
           <a href="work.html" class="btn btn-red">Read the Case Study →</a>
         </div>
         <div class="result-nums">
-          <div class="rnum"><span class="rnum-val">1M+</span><span class="pstat-lbl text-muted">Impressions</span></div>
-          <div class="rnum"><span class="rnum-val">72K+</span><span class="pstat-lbl text-muted">LP Views</span></div>
-          <div class="rnum"><span class="rnum-val">₦0.07</span><span class="pstat-lbl text-muted">Cost / LP View</span></div>
-          <div class="rnum"><span class="rnum-val">93/100</span><span class="pstat-lbl text-muted">Opportunity Score</span></div>
+          <div class="rnum"><span class="rnum-val">1M+</span><span class="rnum-lbl text-muted">Impressions</span></div>
+          <div class="rnum"><span class="rnum-val">72K+</span><span class="rnum-lbl text-muted">LP Views</span></div>
+          <div class="rnum"><span class="rnum-val">₦0.07</span><span class="rnum-lbl text-muted">Cost / LP View</span></div>
+          <div class="rnum"><span class="rnum-val">93/100</span><span class="rnum-lbl text-muted">Opportunity Score</span></div>
         </div>
       </div>
     </div>
@@ -154,15 +157,13 @@
   <!-- CTA -->
   <section class="section-sm">
     <div class="container" style="text-align:center;">
-      <div class="reveal">
-        <h2 style="color:var(--text);">Ready to grow your <span class="text-gold">business?</span></h2>
-        <p style="max-width:480px;margin:16px auto 32px;">
-          Whether you need Meta Ads managed, a customer acquisition system built, or a full marketing strategy — let's talk.
-        </p>
-        <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
-          <a href="contact.html" class="btn btn-red">Get In Touch →</a>
-          <a href="work.html" class="btn btn-outline">View My Work</a>
-        </div>
+      <h2 style="color:var(--text);">Ready to grow your <span class="text-gold">business?</span></h2>
+      <p style="max-width:480px;margin:16px auto 32px;">
+        Whether you need Meta Ads managed, a customer acquisition system built, or a full marketing strategy — let's talk.
+      </p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+        <a href="contact.html" class="btn btn-red">Get In Touch →</a>
+        <a href="work.html" class="btn btn-outline">View My Work</a>
       </div>
     </div>
   </section>
