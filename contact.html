@@ -10,6 +10,7 @@
 <body>
 
 <nav class="navbar">
+  <input type="checkbox" id="nav-toggle" />
   <div class="navbar-inner">
     <a href="index.html" class="nav-logo">Isaiah<span>Jr.</span></a>
     <ul class="nav-links">
@@ -19,7 +20,9 @@
       <li><a href="services.html">Services</a></li>
       <li><a href="contact.html" class="active nav-cta">Hire Me</a></li>
     </ul>
-    <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <label for="nav-toggle" class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </label>
   </div>
   <ul class="mobile-menu">
     <li><a href="index.html">Home</a></li>
@@ -43,8 +46,7 @@
     <div class="container">
       <div class="contact-grid">
 
-        <!-- Left: Info -->
-        <div class="contact-info reveal">
+        <div class="contact-info">
           <div class="contact-intro">
             <h2 style="color:var(--text);">Available for <span class="text-gold">the right work</span></h2>
             <p>I take on a small number of clients at a time so I can actually deliver results. If you're serious about growing, fill out the form and let's talk.</p>
@@ -86,8 +88,7 @@
           </div>
         </div>
 
-        <!-- Right: Form -->
-        <div class="reveal d1">
+        <div>
           <div class="contact-form-wrap">
             <h3 style="color:var(--text);">Send a Message</h3>
             <form id="contactForm" novalidate autocomplete="off">
