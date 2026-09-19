@@ -10,6 +10,7 @@
 <body>
 
 <nav class="navbar">
+  <input type="checkbox" id="nav-toggle" />
   <div class="navbar-inner">
     <a href="index.html" class="nav-logo">Isaiah<span>Jr.</span></a>
     <ul class="nav-links">
@@ -19,7 +20,9 @@
       <li><a href="services.html" class="active">Services</a></li>
       <li><a href="contact.html" class="nav-cta">Hire Me</a></li>
     </ul>
-    <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <label for="nav-toggle" class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </label>
   </div>
   <ul class="mobile-menu">
     <li><a href="index.html">Home</a></li>
@@ -39,12 +42,11 @@
     </div>
   </section>
 
-  <!-- SERVICES -->
   <section class="section">
     <div class="container">
       <div class="services-grid">
 
-        <article class="card service-card reveal">
+        <article class="card service-card">
           <div class="service-num">01</div>
           <span class="tag tag-red" style="margin-bottom:14px;display:inline-block;">Core Service</span>
           <h3>Meta Ads Management</h3>
@@ -59,7 +61,7 @@
           </div>
         </article>
 
-        <article class="card service-card reveal d1">
+        <article class="card service-card">
           <div class="service-num">02</div>
           <span class="tag tag-gold" style="margin-bottom:14px;display:inline-block;">High Impact</span>
           <h3>Customer Acquisition Systems</h3>
@@ -74,7 +76,7 @@
           </div>
         </article>
 
-        <article class="card service-card reveal d2">
+        <article class="card service-card">
           <div class="service-num">03</div>
           <span class="tag tag-blue" style="margin-bottom:14px;display:inline-block;">Growth</span>
           <h3>Social Media Management</h3>
@@ -89,10 +91,10 @@
           </div>
         </article>
 
-        <article class="card service-card reveal d3">
+        <article class="card service-card">
           <div class="service-num">04</div>
           <span class="tag tag-green" style="margin-bottom:14px;display:inline-block;">Strategy</span>
-          <h3>Marketing Strategy & Consulting</h3>
+          <h3>Marketing Strategy &amp; Consulting</h3>
           <p>For founders and marketing teams that need a clear roadmap, a second opinion, or a full marketing audit before committing budget.</p>
           <div class="service-list">
             <div class="service-item">Full marketing audit and gap analysis</div>
@@ -108,47 +110,43 @@
     </div>
   </section>
 
-  <!-- PROCESS -->
   <section class="section-sm" style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
     <div class="container">
-      <div class="reveal" style="text-align:center;margin-bottom:48px;">
+      <div style="text-align:center;margin-bottom:48px;">
         <span class="eyebrow">How I Work</span>
         <h2 style="color:var(--text);">The process</h2>
         <div class="divider-red center"></div>
       </div>
       <div class="process-grid">
-        <div class="card process-step reveal">
+        <div class="card process-step">
           <div class="step-num">01</div>
           <h4>Audit</h4>
           <p style="font-size:.875rem;">I look at what exists — ad accounts, tracking, content, offers — and identify exactly what's broken and what's missing.</p>
         </div>
-        <div class="card process-step reveal d1">
+        <div class="card process-step">
           <div class="step-num">02</div>
           <h4>Strategy</h4>
           <p style="font-size:.875rem;">I build a tailored plan: channels, budgets, campaign structure, funnel architecture, and KPI targets. No templates.</p>
         </div>
-        <div class="card process-step reveal d2">
+        <div class="card process-step">
           <div class="step-num">03</div>
           <h4>Execute</h4>
           <p style="font-size:.875rem;">Campaigns go live. I manage everything daily — creatives, budgets, targeting adjustments — and flag issues fast.</p>
         </div>
-        <div class="card process-step reveal d3">
+        <div class="card process-step">
           <div class="step-num">04</div>
-          <h4>Report & Scale</h4>
+          <h4>Report &amp; Scale</h4>
           <p style="font-size:.875rem;">Weekly reports with honest numbers. What worked gets more budget. What didn't gets cut. We scale what wins.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
   <section class="section-sm">
     <div class="container" style="text-align:center;">
-      <div class="reveal">
-        <h2 style="color:var(--text);">Let's talk about <span class="text-red">your problem</span></h2>
-        <p style="max-width:460px;margin:16px auto 32px;">Tell me what you're working on and I'll tell you exactly how I'd approach it.</p>
-        <a href="contact.html" class="btn btn-red">Get In Touch →</a>
-      </div>
+      <h2 style="color:var(--text);">Let's talk about <span class="text-red">your problem</span></h2>
+      <p style="max-width:460px;margin:16px auto 32px;">Tell me what you're working on and I'll tell you exactly how I'd approach it.</p>
+      <a href="contact.html" class="btn btn-red">Get In Touch →</a>
     </div>
   </section>
 </main>
