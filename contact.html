@@ -91,30 +91,36 @@
         <div>
           <div class="contact-form-wrap">
             <h3 style="color:var(--text);">Send a Message</h3>
-            <form id="contactForm" novalidate autocomplete="off">
+
+            <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate autocomplete="off">
+
+              <input type="hidden" name="access_key" value="98d7de68-0398-4938-981b-f7a158d8c225" />
+              <input type="hidden" name="subject" value="New Enquiry — Isaiah Jr. Portfolio" />
+              <input type="hidden" name="redirect" value="https://vireonmarketingltd-ui.github.io/Digital-Marketing-portfolio/contact.html?success=true" />
+              <input type="checkbox" name="botcheck" style="display:none" />
 
               <div class="form-row">
                 <div class="fg">
                   <label for="f-name">Full Name</label>
-                  <input type="text" id="f-name" class="fi" placeholder="Your name" maxlength="100" />
+                  <input type="text" id="f-name" name="name" class="fi" placeholder="Your name" maxlength="100" required />
                   <div class="err-msg"></div>
                 </div>
                 <div class="fg">
                   <label for="f-email">Email Address</label>
-                  <input type="email" id="f-email" class="fi" placeholder="you@example.com" maxlength="150" />
+                  <input type="email" id="f-email" name="email" class="fi" placeholder="you@example.com" maxlength="150" required />
                   <div class="err-msg"></div>
                 </div>
               </div>
 
               <div class="fg">
                 <label for="f-phone">Phone / WhatsApp <span style="font-weight:400;text-transform:none;color:var(--muted)">(optional)</span></label>
-                <input type="tel" id="f-phone" class="fi" placeholder="+234 800 000 0000" maxlength="20" />
+                <input type="tel" id="f-phone" name="phone" class="fi" placeholder="+234 800 000 0000" maxlength="20" />
                 <div class="err-msg"></div>
               </div>
 
               <div class="fg">
                 <label for="f-service">Service Needed</label>
-                <select id="f-service" class="fi" style="cursor:pointer;appearance:none;background-image:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%2212%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%238A9BB0%22 stroke-width=%222%22%3E%3Cpath d=%22m6 9 6 6 6-6%22/%3E%3C/svg%3E');background-repeat:no-repeat;background-position:right 14px center;padding-right:36px;">
+                <select id="f-service" name="service" class="fi" style="cursor:pointer;appearance:none;background-image:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2212%22 height=%2212%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%238A9BB0%22 stroke-width=%222%22%3E%3Cpath d=%22m6 9 6 6 6-6%22/%3E%3C/svg%3E');background-repeat:no-repeat;background-position:right 14px center;padding-right:36px;">
                   <option value="">Select a service…</option>
                   <option>Meta Ads Management</option>
                   <option>Customer Acquisition System</option>
@@ -128,19 +134,13 @@
 
               <div class="fg">
                 <label for="f-message">Tell Me About Your Business</label>
-                <textarea id="f-message" class="fi" placeholder="What are you selling, who is your customer, and what's the main problem you're trying to solve?" maxlength="1500"></textarea>
+                <textarea id="f-message" name="message" class="fi" placeholder="What are you selling, who is your customer, and what's the main problem you're trying to solve?" maxlength="1500" required></textarea>
                 <div class="err-msg"></div>
               </div>
 
               <button type="submit" id="submitBtn" class="btn btn-red sub-btn">Send Message →</button>
             </form>
 
-            <div id="formSuccess" class="form-success">
-              <div class="si">🎯</div>
-              <h3>Message received.</h3>
-              <p style="margin-bottom:20px;">I'll review your project and get back to you within 24 hours. For faster response, DM me on Instagram.</p>
-              <button id="resetForm" class="btn btn-outline">Send Another Message</button>
-            </div>
           </div>
         </div>
 
@@ -182,6 +182,5 @@
 </footer>
 
 <script src="js/main.js"></script>
-<script src="js/contact.js"></script>
 </body>
 </html>
