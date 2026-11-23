@@ -134,6 +134,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:48px 0 2
 .hero-title em{color:var(--gold);font-style:normal;display:block}
 .hero-desc{font-size:1.05rem;max-width:500px;margin-bottom:36px}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero-services{margin-top:22px;font-size:.72rem;font-weight:700;letter-spacing:.14em;color:var(--muted)}
 .hero-visual{position:relative;z-index:1;display:flex;justify-content:center}
 .photo-frame{position:relative;display:inline-block}
 .photo-frame::before{content:'';position:absolute;inset:-3px;background:linear-gradient(135deg,var(--red),var(--gold),transparent);border-radius:var(--rx);z-index:-1}
